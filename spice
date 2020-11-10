@@ -1,0 +1,115 @@
+using Microsoft.VisualBasic;
+using System;
+using System.Security.Cryptography;
+
+namespace SpiceScale
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Welcome to the SpiceScale. Type pepper to see pepper data, type sauce to see sauce data.");
+            var x = Console.ReadLine();
+            if (x is "pepper")
+            {
+                Console.WriteLine("Type in a value on the Scoville scale and it will return a pepper that has that value");
+                int y = Convert.ToInt32(Console.ReadLine());
+                switch (y)
+                {
+                    case int n when (n >= 0 && n <= 100):
+                        Console.WriteLine("Bell pepper, Cubanelle, Aji dulce, Senise pepper.");
+                        break;
+                    case int n when (n > 100 && n <= 1000):
+                        Console.WriteLine("Pimento, Banana pepper.");
+                        break;
+                    case int n when (n > 1000 && n <= 2500):
+                        Console.WriteLine("Anaheim pepper, Poblano pepper, Rocotillo pepper, Peppadew");
+                        break;
+                    case int n when (n > 2500 && n <= 10000):
+                        Console.WriteLine("Espelette pepper, Jalapeno pepper, Chipotle, Guajillo pepper, New Mexican Anaheim pepper, Hungarian wax pepper, Bullet pepper");
+                        break;
+                    case int n when (n > 10000 && n <= 25000):
+                        Console.WriteLine("Serrano pepper, Peter pepper, Aleppo pepper");
+                        break;
+                    case int n when (n > 25000 && n <= 50000):
+                        Console.WriteLine("Guntur chilli, Cayenne pepper, Aji pepper, Tabasco pepper, Cumari pepper, Peperoncini, Katara, Arbol pepper");
+                        break;
+                    case int n when (n > 50000 && n <= 100000):
+                        Console.WriteLine("Byadgi chilli, Birds eye chili, Malagueta pepper, Chiltepin pepper, Piri piri, Pequin pepper");
+                        break;
+                    case int n when (n > 100000 && n <= 350000):
+                        Console.WriteLine("Habanero chili, Scotch bonnet pepper, Datil pepper, Rocoto, Piri Piri Ndungu, Madame Jeanette, Peruvian White Habanero, Jamaican hot pepper, Guyana Wiri Wiri, Dalle Khursani, Fatalii");
+                        break;
+                    case int n when (n > 350000 && n <= 750000):
+                        Console.WriteLine("Red Savina habanero, Chocolate habanero, Habanaga, Nagabon");
+                        break;
+                    case int n when (n > 750000 && n <= 1500000):
+                        Console.WriteLine("Naga Viper pepper, Infinity chilli, Bhut Jolokia chili pepper, Trinidad Scropion butch T pepper, Bedfordshire super naga");
+                        break;
+                    case int n when (n > 1500000 && n <= 3000000):
+                        Console.WriteLine("Law enforcement grade pepper spray, Trinidad Moruga scorpion, Pepper X, Carolina Reaper, Dragons breath");
+                        break;
+                    case int n when (n > 3000000):
+                        Console.WriteLine("Enter a value lower than 3 million");
+                        break;
+                    case int n when (n < 0):
+                        Console.WriteLine("Number cannot be a negative");
+                        break;
+                }
+            }
+            if (x is "sauce")
+            {
+                Console.WriteLine("Type in a value on the Scoville scale and it will return a sauce that has that value");
+                int y = Convert.ToInt32(Console.ReadLine());
+                switch (y)
+                {
+                    case 6000:
+                        Console.WriteLine("Scorned Woman hot sauce is exactly 5,940 Scovilles");
+                        break;
+                    case 3600:
+                        Console.WriteLine("Cholula Hot sauce from Mexico is exactly 3,600 Scovilles");
+                        break;
+                    case 33000:
+                        Console.WriteLine("Endorphin Rush is exactly 33,390 Scovilles");
+                        break;
+                    case 50000:
+                        Console.WriteLine("Blairs After Death hot sauce is exactly 49,220 Scovilles");
+                        break;
+                    case 250000:
+                        Console.WriteLine("Vicious Viper hot sauce and Liquid Stoopid are both 250,000 Scovilles");
+                        break;
+                    case 300000:
+                        Console.WriteLine("Backdraft hot sauce and Mild and Wild hot sauce are both 300,000 Scovilles");
+                        break;
+                    case 500000:
+                        Console.WriteLine("Z Nothing beyond extreme hot sauce and Pure Cap hot sauce are both 500,000 Scovilles");
+                        break;
+                    case 600000:
+                        Console.WriteLine("Mad Dog 357 collectors edition and Frostbite hot sauce are both 600,000 Scovilles");
+                        break;
+                    case 1000000:
+                        Console.WriteLine("Magma hot sauce, Holy Jolokia, and Cool million hot sauce extract are all 1,000,000 Scovilles");
+                        break;
+                    case 15000000:
+                        Console.WriteLine("DA BOMB and Mild to Wild stupid hot are both 1,500,000 Scovilles");
+                        break;
+                    case 2000000:
+                        Console.WriteLine("Hot Ones The Last Dab Reduxx is 2,000,000 Scovilles");
+                        break;
+                    case 7000000:
+                        Console.WriteLine("The source hot sauce is exactly 7,000,000 Scovilles");
+                        break;
+                    case int n when (n >= 1500 && n <= 15000):
+                        Console.WriteLine("Huy Fong Chili Garlic Hot Sauce, Huy Fong Sriracha HOT Chili Sauce, Mild to Wild False Alarm, Lottie's Traditional Barbados Recipe");
+                        break;
+                    case int n when (n > 15000 && n <= 100000):
+                        Console.WriteLine("Another Bloody Day In Paradise Three Pepper Lemon Hot Sauce, Arizona Gunslinger Smokin' Hot Red Jalapeno, Blair's Original Death Hot Sauce, Blair's Q Heat Chipotle Slam Exotic Hot Sauce, Blair's Q Heat Habanero Mango Exotic Hot Sauce, Blair's Q Heat Jalapeno Tequila Exotic Hot Sauce, Blair's Q Heat Wasabi Green Tea Exotic Hot Sauce, Colon Cleaner Hot Sauce, Gator Hammock, HazMat Hot Sauce");
+                        break;
+                    case int n when (n > 100000 && n <= 1000000):
+                        Console.WriteLine("Pure Arson Hot Sauce, Jolokia Red Ghost Hot Sauce, Jolokia Green Ghost Hot Sauce, Colon Blow A Red Habanero Enema! Hot Sauce");
+                        break;
+                }
+            }
+        }
+    }
+}
