@@ -23,10 +23,10 @@ class userinput {
             System.out.println("My 2 mile personal record is 12:04")
         }
         if (scanTimeval == 5000) {
-            System.out.println("My 5K personal record is 20:22")
+            System.out.println("My 5K personal record is 19:09")
         }
         if (scanTimeval == 10000) {
-            System.out.println("My 10K personal record is 46:51")
+            System.out.println("My 10K personal record is 45:22")
         }
         if (scanArgsval == "custom") {
             System.out.println("Enter your mile best")
